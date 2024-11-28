@@ -21,17 +21,10 @@ use common\models\Languages;
 use common\models\ServiceRequest;
 use common\models\TelegramSettings;
 use common\models\TelegramUser;
-use common\models\Admission;
-use common\models\Advertise;
-use common\models\Callback;
-use common\models\Company;
-use common\models\District;
 use common\models\Email;
 use common\models\Polls;
-use common\models\Reception;
 use common\models\SearchForm;
 use common\models\Faq;
-use common\models\Testimonials;
 use common\components\Controller;
 use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
@@ -123,10 +116,6 @@ class SiteController extends Controller
     {
         return $this->render('services');
     }
-
-
-
-
 
     public function actionSearch()
     {
@@ -229,18 +218,6 @@ class SiteController extends Controller
         }
 
         return false;
-    }
-
-    public function actionLeader()
-    {
-
-        $models = Leader::find()->where('status=1')->orderBy(['id'=>SORT_ASC])->all();
-
-        return $this->render('leader',[
-            'models' => $models,
-//            'pagination' => $pagination
-        ]);
-
     }
 
 }

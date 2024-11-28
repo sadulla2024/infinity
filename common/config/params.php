@@ -1,7 +1,7 @@
 <?php
 return [
-    'frontend' => 'http://terdupi.webforte.uz/',
-    'backend' => 'https://terdupi-admin.webforte.uz',
+    'frontend' => 'http://infinity/',
+    'backend' => 'https://infinity/admin',
 
     'images_dir' => '/frontend/web/uploads/images/',
     'images_url' => '/uploads/images/',

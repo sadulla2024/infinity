@@ -23,91 +23,55 @@ function renderFooterMenu($id)
 
  ?>
 
-<div class="footer-section bg-color-10">
-
-    <!-- Footer Widget Area Start -->
-    <div class="footer-widget-area section-padding-01">
-        <div class="container">
-            <div class="row gy-6">
-
-                <div class="col-md-4">
-                    <!-- Footer Widget Start -->
-                    <div class="footer-widget">
-                        <a href="#" class="footer-widget__logo">
-                            <img src="/images/logo.png" alt="Logo">
-                            <span> <?=\common\components\StaticFunctions::getSettings('title')?> </span>
+<footer id="footer">
+    <div class="container">
+        <div class="footer_row">
+            <div class="footer_left">
+                <a href="#" class="brand_logo">
+                    <img src="img/icons/logo1.png" alt="">
+                </a>
+                <form>
+                    <div class="subscribe_title">Подписывайтесь</div>
+                    <input type="email" placeholder="Email">
+                    <button>Отправить</button>
+                </form>
+            </div>
+            <div>
+                <ul class="header_links">
+                    <li><a href="#">Инвесторам</a></li>
+                    <li><a href="#" class="active">Заемщикам</a></li>
+                    <li><a href="#">Облигации</a></li>
+                    <li><a href="#">Энциклопедия инвестора</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <p class="footer_desc">Любая информация, представленная на данном сайте, носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437 ГК РФ. </p>
+            </div>
+            <div class="footer_right">
+                <div class="social">
+                    <p>Мы в соц. сетях</p>
+                    <div>
+                        <a href="#">
+                            <img src="img/icons/tg.svg" alt="">
                         </a>
-
-
-                        <div class="footer-widget__info">
-                            <p class="mb-3"><?=\common\components\StaticFunctions::getSettings('mail-index')?></p>
-                            <p class="mb-3"><?=\common\components\StaticFunctions::getSettings('transport-list')?></p>
-                            <p><?=\common\components\StaticFunctions::getSettings('author-requirement')?></p>
-                        </div>
-
-
-                    </div>
-                    <!-- Footer Widget End -->
-                </div>
-
-                <div class="col-md-8">
-                    <div class="row gy-6">
-
-                        <div class="col-sm-8">
-                            <!-- Footer Widget Start -->
-                            <div class="footer-widget">
-                                <h4 class="footer-widget__title"><?=Yii::t('main','how-to-get')?></h4>
-                                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2a2641113cbfd3905ef7e0a70cf345c264fb87fd976d7b84c7f08c0902a5737f&amp;width=100%&amp;height=381&amp;lang=ru_RU&amp;scroll=true"></script>
-                            </div>
-                            <!-- Footer Widget End -->
-                        </div>
-                        <div class="col-sm-4">
-                            <!-- Footer Widget Start -->
-                            <div class="footer-widget">
-
-                                <div class="footer-widget__info">
-                                    <span class="title"><?=Yii::t('main','address')?></span>
-                                    <span class="number"><a href="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2a2641113cbfd3905ef7e0a70cf345c264fb87fd976d7b84c7f08c0902a5737f&amp;width=100%&amp;height=381&amp;lang=ru_RU&amp;scroll=true" target="_blank"><?=\common\components\StaticFunctions::getSettings('address_footer')?></a></span>
-                                </div>
-
-                                <div class="footer-widget__info">
-                                    <span class="title"><?=Yii::t('main','call-center')?></span>
-                                    <span class="number"><a href="tel:<?=\common\components\StaticFunctions::getSettings('phone')?>"><?=\common\components\StaticFunctions::getSettings('phone')?></a></span>
-                                </div>
-
-                                <div class="footer-widget__info">
-                                    <span class="title">E-mail</span>
-                                    <span class="number"><a href="mailto:<?=\common\components\StaticFunctions::getSettings('mail')?>"><?=\common\components\StaticFunctions::getSettings('mail')?></a></span>
-                                </div>
-
-                                <div class="footer-widget__social-02">
-                                    <a class="facebook" href="<?=\common\components\StaticFunctions::getSettings('facebook')?>" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="youtube" href="<?=\common\components\StaticFunctions::getSettings('youtube')?>" target="_blank"><i class="fab fa-youtube"></i></a>
-                                    <a class="telegram" href="<?=\common\components\StaticFunctions::getSettings('telegram')?>" target="_blank"><i class="fab fa-telegram"></i></a>
-                                </div>
-
-
-                            </div>
-                            <!-- Footer Widget End -->
-                        </div>
-
+                        <a href="#">
+                            <img src="img/icons/ig.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/icons/yt.svg" alt="">
+                        </a>
                     </div>
                 </div>
-
+                <form>
+                    <div class="subscribe_title">Подписывайтесь</div>
+                    <input type="email" placeholder="Email">
+                    <button>Отправить</button>
+                </form>
             </div>
         </div>
-    </div>
-    <!-- Footer Widget Area End -->
-
-    <!-- Footer Copyright Area End -->
-    <div class="footer-copyright">
-        <div class="container">
-            <div class="copyright-wrapper text-center">
-
-                <p class="footer-widget__copyright mt-0"> <?=\common\components\StaticFunctions::getSettings('copyright')?></p>
-            </div>
+        <div class="footer_links">
+            <p>©2024. Все права защищены</p>
+            <a href="#">Политика конфиденциальности</a>
         </div>
     </div>
-    <!-- Footer Copyright Area End -->
-
-</div>
+</footer>

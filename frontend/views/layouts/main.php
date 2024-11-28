@@ -25,21 +25,18 @@ AppAsset::register($this);
 
     <title><?= Html::encode($this->title) ?></title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
-
     <?= Html::csrfMetaTags() ?>
 
     <?php $this->head() ?>
 
 </head>
 
-<body id="bg">
+<body>
 
     <?php $this->beginBody() ?>
 
     <!-- Boxed Layout -->
-    <main class="main-wrapper">
-
+    <div class="wrapper">
 
         <?= \frontend\widgets\Header::widget();?>
 
@@ -47,14 +44,9 @@ AppAsset::register($this);
 
         <?= \frontend\widgets\Footer::widget();?>
 
-        <!--Back To Start-->
-        <button id="backBtn" class="back-to-top backBtn">
-            <i class="arrow-top fal fa-long-arrow-up"></i>
-            <i class="arrow-bottom fal fa-long-arrow-up"></i>
-        </button>
-        <!--Back To End-->
+        <div class="modal_back"></div>
 
-    </main>
+    </div>
     <!-- End Boxed Layout -->
 
 
