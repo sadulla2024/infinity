@@ -3,21 +3,19 @@
 use common\models\Menu;
 
 function renderMenu($id){
-
     $out = '';
     $menu = Menu::find()->where('status=1')->andWhere(['id' => $id, 'type' => 0])->one();
     $_query = Menu::find()->where('status=1')->andWhere(['parent' => $id, 'type' => 0]);
 
     if( $_query->exists() )
     {
-        $out .= '<li class="menu-item-has-children"><a href="#"> <span>';
-        $out .= $menu->title . '</span></a>';
+        $out .= '<li class=""><a href="#">';
+        $out .= $menu->title . '</a>';
         $out .= '<ul class="sub-menu">';
         $items = $_query->orderBy(['order_by' => SORT_ASC])->all();
         foreach ($items as $item){
             $out .= renderMenu($item->id);
         }
-
         $out .= '</ul></li>';
 
     } else {
@@ -26,8 +24,6 @@ function renderMenu($id){
         $out .= $menu->title.'</a></li>';
 
     }
-
-
     return $out;
 }
 
@@ -43,29 +39,28 @@ function renderMenu($id){
     <div class="container">
         <div class="header_row">
             <span class="hamburger">
-                <img src="img/icons/hamburger.svg" alt="">
+                <img src="/img/icons/hamburger.svg" alt="">
             </span>
-            <a href="index.html" class="brand_logo">
-                <img src="img/icons/logo1.png" alt="">
+            <a href="/" class="brand_logo">
+                <img src="/img/icons/logo1.png" alt="">
             </a>
             <div class="header_right">
                 <ul class="header_links">
-                    <li><a href="index.html#hero">Инвесторам</a></li>
-                    <li><a href="index.html#products" class="active">Заемщикам</a></li>
-                    <li><a href="index.html#calculator">Облигации</a></li>
-                    <li><a href="index.html#news">Энциклопедия инвестора</a></li>
-                    <li><a href="index.html#faq">О нас</a></li>
-                    <li><a href="index.html#footer">Контакты</a></li>
+                    <?php
+                        foreach ($models as $model) {
+                            echo renderMenu( $model->id );
+                        }
+                    ?>
                 </ul>
                 <div class="header_actions">
                     <div class="language">
-                        <a href="#" class="active">RU</a>
-                        |
-                        <a href="#">EN</a>
+                        <?php foreach ($langs as $language): ?>
+                            <a href="<?=\yii\helpers\Url::to(['site/lang','lang'=>$language->abb ])?>" class="<?=($lang == $language->abb) ? 'active' : ''?>" style="text-transform:uppercase"><?=$language->abb?></a>
+                        <?php endforeach; ?>
                     </div>
                     <a href="login.html" class="btn_">Регистрация</a>
                     <a href="dashboard.html" class="login_icon">
-                        <img src="img/icons/login_icon.svg" alt="">
+                        <img src="/img/icons/login_icon.svg" alt="">
                     </a>
                 </div>
             </div>
@@ -73,8 +68,8 @@ function renderMenu($id){
     </div>
     <div class="header_menu">
         <div>
-            <a href="#" class="mobile_logo">
-                <img src="img/icons/logo1.png" alt="">
+            <a href="/" class="mobile_logo">
+                <img src="/img/icons/logo1.png" alt="">
             </a>
             <ul class="mobile_menu">
                 <li>
@@ -85,25 +80,25 @@ function renderMenu($id){
                 </li>
                 <li>
                     <a href="#">
-                        <img src="img/icons/finance_icon.svg" alt="">
+                        <img src="/img/icons/finance_icon.svg" alt="">
                         Рынок
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="img/icons/briefcase_icon.svg" alt="">
+                        <img src="/img/icons/briefcase_icon.svg" alt="">
                         Портфель
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="img/icons/diagram_icon.svg" alt="">
+                        <img src="/img/icons/diagram_icon.svg" alt="">
                         Аналитика платформы
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="img/icons/settings_icon.svg" alt="">
+                        <img src="/img/icons/settings_icon.svg" alt="">
                         Настройки
                     </a>
                 </li>

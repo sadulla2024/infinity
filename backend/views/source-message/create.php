@@ -40,10 +40,10 @@ $this->params['breadcrumbs'][] = $this->title;
                             <textarea id="ru" class="form-control" name="ru" rows="3" aria-required="true"></textarea>
                         </div>
 
-                        <div class="form-group required">
+                        <!-- <div class="form-group required">
                             <label class="control-label" for="uz">O'ZBEKCHA</label>
                             <textarea id="uz" class="form-control" name="uz" rows="3" aria-required="true"></textarea>
-                        </div>
+                        </div> -->
 
                         <div class="form-group required">
                             <label class="control-label" for="en">ENGLISH</label>

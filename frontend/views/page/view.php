@@ -105,7 +105,7 @@ $this->registerMetatag([
 
             </div>
 
-            <?=\frontend\widgets\Sidebar::widget()?>
+<!--            --><?//=\frontend\widgets\Sidebar::widget()?>
 
         </div>
     </div>

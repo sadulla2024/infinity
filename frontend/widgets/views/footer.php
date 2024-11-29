@@ -27,8 +27,8 @@ function renderFooterMenu($id)
     <div class="container">
         <div class="footer_row">
             <div class="footer_left">
-                <a href="#" class="brand_logo">
-                    <img src="img/icons/logo1.png" alt="">
+                <a href="/" class="brand_logo">
+                    <img src="/img/icons/logo1.png" alt="">
                 </a>
                 <form>
                     <div class="subscribe_title">Подписывайтесь</div>
@@ -52,13 +52,13 @@ function renderFooterMenu($id)
                     <p>Мы в соц. сетях</p>
                     <div>
                         <a href="#">
-                            <img src="img/icons/tg.svg" alt="">
+                            <img src="/img/icons/tg.svg" alt="">
                         </a>
                         <a href="#">
-                            <img src="img/icons/ig.svg" alt="">
+                            <img src="/img/icons/ig.svg" alt="">
                         </a>
                         <a href="#">
-                            <img src="img/icons/yt.svg" alt="">
+                            <img src="/img/icons/yt.svg" alt="">
                         </a>
                     </div>
                 </div>

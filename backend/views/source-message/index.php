@@ -56,13 +56,13 @@ $this->params['breadcrumbs'][] = $this->title;
                                         return htmlentities(\common\components\StaticFunctions::getPartOfText($data['message'], 30));
                                     }
                                 ],
-                                [
-                                    'attribute' => 'O`zbekcha',
-                                    'contentOptions' => ['class' => 'v-align-middle'],
-                                    'content' => function($data){
-                                        return htmlentities(StaticFunctions::getPartOfText($data['uz']['translation'], 30));
-                                    }
-                                ],
+                                // [
+                                //     'attribute' => 'O`zbekcha',
+                                //     'contentOptions' => ['class' => 'v-align-middle'],
+                                //     'content' => function($data){
+                                //         return htmlentities(StaticFunctions::getPartOfText($data['uz']['translation'], 30));
+                                //     }
+                                // ],
                                 [
                                     'attribute' => 'Русский',
                                     'label' => 'Русский',

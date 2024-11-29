@@ -38,52 +38,28 @@ AppAsset::register($this);
             <?php
                 if (!Yii::$app->user->isGuest) {
                     $menuItems = [
-                        ['label' => Yii::t('main', 'Asosiy'), 'icon' => 'pg-home', 'url' => '/site/index']
+                        ['label' => Yii::t('main', 'Home'), 'icon' => 'pg-home', 'url' => '/site/index']
                     ];
-                    $menuItems[] = ['label' => Yii::t('main', 'Slayder'), 'icon' => 'fa fa-picture-o', 'items' => [
-                        ['label' => Yii::t('main', 'Barcha Salydlar'), 'url' => '/slider/index', 'icon' => 'NS'],
-                    ]];
-                    $menuItems[] = ['label' => Yii::t('main', 'Yangiliklar'), 'icon' => 'pg-layouts', 'items' => [
-                        ['label' => Yii::t('main', 'Barcha Yangiliklar'), 'url' => '/news/index', 'icon' => 'NS'],
-                        ['label' => Yii::t('main', 'Yangiliklar kategoriyalari'), 'url' => '/news-category/index', 'icon' => 'NC']
-                    ]];
-                    $menuItems[] = ['label' => Yii::t('main', 'Resurslar'), 'icon' => 'pg-layouts', 'items' => [
-                        ['label' => Yii::t('main', 'Barcha Resurslar'), 'url' => '/resource/index', 'icon' => 'NS'],
-                        ['label' => Yii::t('main', 'Resurs kategoriyalari'), 'url' => '/resource-category/index', 'icon' => 'NC']
+                    
+                    $menuItems[] = ['label' => Yii::t('main', 'News'), 'icon' => 'pg-layouts', 'items' => [
+                        ['label' => Yii::t('main', 'All News'), 'url' => '/news/index', 'icon' => 'ВН'],
+                        ['label' => Yii::t('main', 'News Categories'), 'url' => '/news-category/index', 'icon' => 'НК']
                     ]];
 
-                    $menuItems[] = ['label' => Yii::t('main', 'Fotogalereya'), 'icon' => 'pg-layouts', 'items' => [
-                        ['label' => Yii::t('main', 'Albomlar'), 'url' => '/album/index', 'icon' => 'NS'],
-                        ['label' => Yii::t('main', 'Rasmlar'), 'url' => '/image/index', 'icon' => 'NC']
+                    $menuItems[] = ['label' => Yii::t('main', 'Content'), 'icon' => 'pg-layouts', 'items' => [
+                        ['label' => Yii::t('main', 'Pages'), 'url' => '/page/index', 'icon' => 'Ст'],
+                        ['label' => Yii::t('main', 'Posts'), 'url' => '/post/index', 'icon' => 'По'],
+                        ['label' => Yii::t('main', 'Post Categories'), 'url' => '/post-category/index', 'icon' => 'ПК'],
+                        ['label' => Yii::t('main', 'FAQ'), 'url' => '/faq/index', 'icon' => 'FAQ'],
+                        ['label' => Yii::t('main', 'Menu'), 'url' => '/menu/index', 'icon' => 'ME'],
                     ]];
 
-                    $menuItems[] = ['label' => Yii::t('main', 'Kontent'), 'icon' => 'pg-layouts', 'items' => [
-                        ['label' => Yii::t('main', 'Sahifalar'), 'url' => '/page/index', 'icon' => 'Ст'],
-                        ['label' => Yii::t('main', 'Postlar'), 'url' => '/post/index', 'icon' => 'По'],
-                        ['label' => Yii::t('main', 'Post Categoriyalari'), 'url' => '/post-category/index', 'icon' => 'Кг'],
-                        ['label' => Yii::t('main', 'Bannerlar'), 'url' => '/advertise/index', 'icon' => 'Ad'],
-                        ['label' => Yii::t('main', 'Menyu'), 'url' => '/menu/index', 'icon' => 'ME'],
-                        ['label' => Yii::t('main', 'Foydali Manzillar'), 'url' => '/partner/index', 'icon' => 'PA'],
-                    ]];
-                    $menuItems[] = ['label' => Yii::t('main', 'Interaktiv Xizmatlar'), 'icon' => 'pg-settings_small_1', 'items' => [
-                        ['label' => Yii::t('main', 'Interaktiv Xizmatlar'), 'url' => '/services/index', 'icon' => 'Se'],
-                    ]];
-                    $menuItems[] = ['label' => Yii::t('main', 'Raxbariyat'), 'icon' => 'pg-layouts', 'items' => [
-                        ['label' => Yii::t('main', 'Raxbariyat'), 'url' => '/leader/index', 'icon' => 'RA'],
-                    ]];
-                    $menuItems[] = ['label' => Yii::t('main', 'Hujjatlar'), 'icon' => 'pg-layouts', 'items' => [
-                        ['label' => Yii::t('main', 'Hujjatlar'), 'url' => '/document/index', 'icon' => 'Hu'],
-                        ['label' => Yii::t('main', 'Hujjatlar kategoriyalari'), 'url' => '/document-category/index', 'icon' => 'HK'],
-                    ]];
-                    $menuItems[] = ['label' => Yii::t('main', 'Murojaatlar'), 'icon' => 'pg-layouts', 'items' => [
-                        ['label' => Yii::t('main', 'Murojaatlar'), 'url' => '/contact/index', 'icon' => 'Ст'],
-                   ]];
-                    $menuItems[] = ['label' => Yii::t('main', 'Sozlanmalar'), 'icon' => 'pg-settings', 'items' => [
-                        ['label' => Yii::t('main', 'Foydalanuvchilar'), 'url' => '/user/index', 'icon' => 'П'],
+                    $menuItems[] = ['label' => Yii::t('main', 'Settings'), 'icon' => 'pg-settings', 'items' => [
+                        ['label' => Yii::t('main', 'Users'), 'url' => '/user/index', 'icon' => 'П'],
 //                        ['label' => Yii::t('main', 'Site Users'), 'url' => '/site-user/index', 'icon' => 'П'],
-                        ['label' => Yii::t('main', 'Asosiy Sozlanmalar'), 'url' => '/settings/index', 'icon' => 'ОС'],
+                        ['label' => Yii::t('main', 'Main Settings'), 'url' => '/settings/index', 'icon' => 'ОС'],
 //                        ['label' => Yii::t('main', 'Tuman saytlari info'), 'url' => '/region-settings/index', 'icon' => 'ОС'],
-                        ['label' => Yii::t('main', 'Tarjima matnlari'), 'url' => '/source-message/index', 'icon' => 'РЯ']
+                        ['label' => Yii::t('main', 'Source Messages'), 'url' => '/source-message/index', 'icon' => 'ИС']
                     ]];
 //                    $menuItems[] = ['label' => Yii::t('main', 'Telegram'), 'icon' => 'pg-settings', 'items' => [
 //                        ['label' => Yii::t('main', 'Main Settings'), 'url' => '/telegram/index', 'icon' => 'ОС'],

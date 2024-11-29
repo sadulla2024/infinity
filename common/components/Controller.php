@@ -14,7 +14,7 @@ class Controller extends \yii\web\Controller
 
         if($query || $lang == Yii::$app->params['main_language']) {
 
-            $lang_id = $lang == Yii::$app->params['main_language'] ? 3 : $query->id;
+            $lang_id = $lang == Yii::$app->params['main_language'] ? 1 : $query->id;
 
             Yii::$app->language = $lang;
             Yii::$app->session->set('lang', $lang);

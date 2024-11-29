@@ -1,7 +1,7 @@
 <?php
 return [
-    'frontend' => 'http://infinity/',
-    'backend' => 'https://infinity/admin',
+    'frontend' => 'http://infinity',
+    'backend' => 'http://admininfinity',
 
     'images_dir' => '/frontend/web/uploads/images/',
     'images_url' => '/uploads/images/',
@@ -26,10 +26,10 @@ return [
     'services_limit' => 8,
     'services_category_limit' => 3,
 
-    'main_language' => 'uz',
+    'main_language' => 'ru',
     'main_lang' => [
-        'abb' => 'uz',
-        'name' => 'O`zbekcha'
+        'abb' => 'ru',
+        'name' => 'Русский'
     ],
     'main_language_id' => 1,
     'lang_id' => 1,

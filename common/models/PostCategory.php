@@ -56,6 +56,7 @@ class PostCategory extends \yii\db\ActiveRecord
             $model = Yii::$app->db->createCommand('Select * from '.$this->tableName().' where id=' . $this->id)->queryOne();
         } else {
             $id = Languages::find()->filterWhere(['abb' => $lang])->one()->id;
+            
             $model = Yii::$app->db->createCommand('Select * from '.$this->tableName().'_lang where parent='. $this->id.' and lang='.$id)->queryOne();
         }
         return $model[$column];

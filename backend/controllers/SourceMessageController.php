@@ -55,11 +55,11 @@ class SourceMessageController extends Controller
             $model_ru->translation = Yii::$app->request->post()['ru'];
             $model_ru->save();
 
-            $model_uz = new Message();
-            $model_uz->id = $model->id;
-            $model_uz->language = 'uz';
-            $model_uz->translation = Yii::$app->request->post()['uz'];
-            $model_uz->save();
+            // $model_uz = new Message();
+            // $model_uz->id = $model->id;
+            // $model_uz->language = 'uz';
+            // $model_uz->translation = Yii::$app->request->post()['uz'];
+            // $model_uz->save();
 
         }
 
@@ -118,9 +118,9 @@ class SourceMessageController extends Controller
             $model->translation = Yii::$app->request->post()['ru'];
             $model->save();
 
-            $model = Message::findOne(['id' => $id, 'language' => 'uz']);
-            $model->translation = Yii::$app->request->post()['uz'];
-            $model->save();
+            // $model = Message::findOne(['id' => $id, 'language' => 'uz']);
+            // $model->translation = Yii::$app->request->post()['uz'];
+            // $model->save();
 
             $model = Message::findOne(['id' => $id, 'language' => 'en']);
             $model->translation = Yii::$app->request->post()['en'];

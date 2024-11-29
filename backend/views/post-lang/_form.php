@@ -28,6 +28,8 @@ use yii\widgets\ActiveForm;
 
             <?= $form->field($model, 'second_title')->label( Yii::t('main', 'Subtitle') ) ?>
 
+            <?= $form->field($model, 'anons')->textarea(['rows'=>3])->label( Yii::t('main', 'Анонс') ) ?>
+
             <?= $form->field($model, 'body')->label( Yii::t('main', 'Content') )->textarea(['id' => 'postlang-body-'.$model->lang]); ?>
 
         </div>

@@ -77,6 +77,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+        // session_destroy();die;
         return $this->render('index');
     }
 
